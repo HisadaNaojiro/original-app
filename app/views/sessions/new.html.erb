@@ -1,0 +1,22 @@
+<%= t flash[:danger] %>
+<h1><%= t @h1 %></h1>
+<%= form_for @form, url: :authenticate ,html: {class: 'form-horizontal'}  do |f| %>
+  <div class="form-group">
+    <%= f.label :email ,class: 'col-sm-2 control-label' %>
+    <div class="col-sm-5">
+      <%= f.email_field :email ,class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password ,class: 'col-sm-2 control-label' %>
+    <div class="col-sm-5">
+      <%= f.password_field :password ,class: 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit class: 'btn btn-success'%>
+    </div>
+  </div>
+<% end %>

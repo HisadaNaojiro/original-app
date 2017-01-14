@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  before_action :authorize ,except: [:new,:create]
+
   def new
     set_meta({
         'title' => 'sign_up',
@@ -21,8 +23,11 @@ class UsersController < ApplicationController
       return render action: 'new'
     end
 
-    flash.notice = 'ユーザ登録が完了しました'
+    flash.notice = 'notice.complete_register_user'
     redirect_to :users
+  end
+
+  def index
   end
 
   private
