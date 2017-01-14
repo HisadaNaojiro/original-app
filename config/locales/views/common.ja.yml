@@ -3,3 +3,8 @@ ja:
     men: 男性
     women: 女性
   sign_up: 新規登録
+  login: ログイン
+  alert:
+    please_log_in: ログインしてください
+  notice:
+    complete_register_user: ユーザ登録が完了しました
